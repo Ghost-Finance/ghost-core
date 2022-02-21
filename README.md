@@ -5,18 +5,18 @@
     <img src="images/logo.jpg" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">G-minter by Ghost.Finance</h3>
+<h3 align="center">Ghost-Core by Ghost.Finance</h3>
 
 <p align="center">
     <br />
-    <a href="https://github.com/g-minter/docs"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/ghost-core/docs"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="#">soon in production</a>
     ·
-    <a href="https://github.com/Ghost-Finance/g-minter/issues">Report Bug</a>
+    <a href="https://github.com/Ghost-Finance/ghost-core/issues">Report Bug</a>
     ·
-    <a href="https://github.com/Ghost-Finance/g-minter/issues">Request Feature</a>
+    <a href="https://github.com/Ghost-Finance/ghost-core/issues">Request Feature</a>
 </p>/
 
 </p>
@@ -43,7 +43,7 @@
 
 ## Quickstart: Running local
 
-1. Open a new terminal window and run `git clone https://github.com/Ghost-Finance/g-minter && cd g-minter`
+1. Open a new terminal window and run `git clone https://github.com/Ghost-Finance/ghost-core && cd ghost-core`
 2. run `npm i` to install backend dependencies
 3. run `npm run test:local` to run contract test suite to run smart contract test cases
 4. run `npm run deploy:local` to compile and deploy the Minter contract to the ganache node

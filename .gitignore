@@ -1,0 +1,15 @@
+node_modules/
+cache/
+build/
+typechain/
+artifacts/
+coverage*
+.env
+.DS_Store
+/readmeImages/.DS_Store
+.firebase/
+frontend/*-lock.*
+frontend/src/components/Deposit.tsx
+test/uma-contract-address.json
+*.lock
+*-lock.*
