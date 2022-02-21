@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts/median/Median.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">contracts/median/</a> Median.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/24</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/24</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">//SPDX-License-Identifier: MIT
+// Fork by Maker Median.sol https://github.com/makerdao/median/blob/master/src/median.sol
+pragma solidity ^0.8.0;
+&nbsp;
+import "@openzeppelin/contracts/access/Ownable.sol";
+&nbsp;
+contract Median is Ownable {
+&nbsp;
+  struct FeedData {
+    uint256 value;
+    uint timestamp;
+    uint8 v;
+    bytes32 r;
+    bytes32 s;
+  }
+&nbsp;
+  uint128        feedValue;
+  uint32  public feedCreatedAt;
+  bytes32 public feedType = "DAI";
+  uint256 public bar = 3; // numero de respostas para cada feed
+&nbsp;
+  // Authorized oracles, set by an auth
+  mapping (address =&gt; uint256) public oracle;
+&nbsp;
+  // Whitelisted contracts, set by an auth
+  mapping (address =&gt; uint256) public bud;
+&nbsp;
+  // Mapping for at most 256 oracles
+  mapping (uint8 =&gt; address) public slot;
+&nbsp;
+<span class="fstat-no" title="function not covered" >  modifier toll { <span class="cstat-no" title="statement not covered" >require(bud[msg.sender] == 1, "Contract not permitted to read")</span>; _;}</span>
+&nbsp;
+  event LogMedianPrice(uint256 val, uint256 age);
+&nbsp;
+<span class="fstat-no" title="function not covered" >  constructor() {}</span>
+&nbsp;
+<span class="fstat-no" title="function not covered" >  function read() external view toll returns (uint256) {</span>
+<span class="cstat-no" title="statement not covered" >    (uint256 price, bool valid) = peek();</span>
+<span class="cstat-no" title="statement not covered" >    require(valid, "Invalid price to read")</span>;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return price;</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  function peek() public view toll returns (uint256, bool) {</span>
+    // Adiciona a janela de tempo
+<span class="cstat-no" title="statement not covered" >    return (feedValue, feedValue &gt; 0);</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  function recover(uint256 feedValue_, uint256 feedTimestamp_, uint8 v, bytes32 r, bytes32 s) virtual public view returns (address) {</span>
+<span class="cstat-no" title="statement not covered" >    return ecrecover(</span>
+      keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(feedValue_, feedTimestamp_, feedType)))),
+      v, r, s
+    );
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  function poke(FeedData[] memory data) external {</span>
+<span class="cstat-no" title="statement not covered" >    require(data.length == bar, "Invalid number of answers of Oracles")</span>;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    uint256 bloom = 0;</span>
+<span class="cstat-no" title="statement not covered" >    uint256 last = 0;</span>
+<span class="cstat-no" title="statement not covered" >    uint256 zzz = feedCreatedAt;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    for (uint i = 0; i &lt; data.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >      uint8 sl;</span>
+      // Validate the values were signed by an authorized oracle
+<span class="cstat-no" title="statement not covered" >      address signer = recover(data[i].value, data[i].timestamp, data[i].v, data[i].r, data[i].s);</span>
+      // Check that signer is an oracle
+<span class="cstat-no" title="statement not covered" >      require(oracle[signer] == 1, "Not authorized oracle signer")</span>;
+      // Price feed age greater than last medianizer age
+<span class="cstat-no" title="statement not covered" >      require(data[i].timestamp &gt; zzz, "Signer oracle message expired")</span>;
+      // Check for ordered values
+<span class="cstat-no" title="statement not covered" >      require(data[i].value &gt;= last, "Message is not in the order")</span>;
+<span class="cstat-no" title="statement not covered" >      last = data[i].value</span>;
+      // Bloom filter for signer uniqueness
+      assembly {
+        sl := shr(152, signer)
+      }
+<span class="cstat-no" title="statement not covered" >      require((bloom &gt;&gt; sl) % 2 == 0, "Signer oracle already sended")</span>;
+<span class="cstat-no" title="statement not covered" >      bloom += uint256(2) ** sl</span>;
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    feedValue = uint128(data[data.length &gt;&gt; 1].value)</span>;
+<span class="cstat-no" title="statement not covered" >    feedCreatedAt = uint32(block.timestamp)</span>;
+<span class="cstat-no" title="statement not covered" >    emit LogMedianPrice(feedValue, feedCreatedAt);</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  function addOracle(address newOracle) external onlyOwner {</span>
+<span class="cstat-no" title="statement not covered" >    oracle[newOracle] = 1</span>;
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  function addContract(address contractAddress) external onlyOwner {</span>
+<span class="cstat-no" title="statement not covered" >    bud[contractAddress] = 1</span>;
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Feb 10 2022 11:35:43 GMT-0300 (Brasilia Standard Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+exit
+const balance = await a.eth.getBalance('0xfC23d88563081816CcB60B59Da6D17e4467Bb22f')
+a.eth
+a
+const a = new web3()
+const w = new web3()
+const w = new web3(window.ethereum)
+web3
+const web3 = require('web3')
+web3
+exit
+accounts.provider
+accounts
+accounts.address
+const accounts = await ethers.getSigner()
+accounts
+const accounts = await ethers.getSigner()
+const accounts = await ethers.getSigners()
+ethers
+exit
+(await mint.synthDebt('0xfC23d88563081816CcB60B59Da6D17e4467Bb22f', '0xd8DC95AFd0496Ae5e30bCfc54143F12964301B5A')).toString()
+mint
+const mint = Minter1.attach('0x87826225603A4719eA1E11D9f3586574cEceDd9E')
+const Minter1 = await ethers.getContractFactory('Minter')
+const minter = Minter.attach('0x87826225603A4719eA1E11D9f3586574cEceDd9E')
+const Minter = ethers.getContractFactory('Minter')

@@ -1,0 +1,83 @@
+{
+  "name": "g-minter",
+  "version": "1.0.0",
+  "description": "g-minter is Ghost Token Minter ",
+  "main": "index.js",
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "build": "npm run install:fe && yarn",
+    "build:fe:dev": "cd frontend && REACT_APP_CHAIN_NETWORK=RINKEBY npm run build",
+    "test": "npx hardhat test",
+    "test:local": "npx hardhat --network localhost test",
+    "test:coverage": "npx hardhat coverage --solcoverjs \".solcover.js\"",
+    "deploy:local": "npx hardhat run scripts/deploy.ts --network \"localhost\"",
+    "deploy:rinkeby": "npx hardhat run scripts/deploy.ts --network \"rinkeby\"",
+    "deploy:fe:dev": "npm run build:fe:dev && firebase deploy --only hosting:develop",
+    "verify:rinkeby": "npx hardhat --network \"rinkeby\" etherscan-verify",
+    "node": "npx hardhat node",
+    "clean:modules": "rm -rf node_modules",
+    "clean:contracts": "rm -rf artifacts && rm -rf cache",
+    "clean:typechain": "rm -rf typechain",
+    "clean:root": "npm run clean:modules && npm run clean:contracts && npm run clean:typechain",
+    "clean:fe": "cd frontend && npm run clean",
+    "clean": "npm run clean:root && npm run clean:fe",
+    "console:local": "npx hardhat console --network \"localhost\"",
+    "console:rinkeby": "npx hardhat console --network \"rinkeby\"",
+    "install:fe": "cd frontend && npm i",
+    "install:all": "npm i && npm run install:fe",
+    "fix": "npm run clean && npm run install:all",
+    "start": "npm run fix && npm run compile && npm test && npm run node",
+    "start:fe": "npm run compile && npm run deploy:local && cd frontend && npm start"
+  },
+  "keywords": [],
+  "author": "tyl3r<chineblane@gmail.com>",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.0",
+    "@nomiclabs/hardhat-etherscan": "^2.1.6",
+    "@nomiclabs/hardhat-waffle": "^2.0.0",
+    "@openzeppelin/contracts": "^4.2.0",
+    "@typechain/ethers-v5": "^4.0.0",
+    "@types/chai": "^4.2.14",
+    "@types/mocha": "^8.2.0",
+    "@types/node": "^14.14.10",
+    "bignumber.js": "^9.0.1",
+    "chai": "^4.2.0",
+    "dotenv": "^8.2.0",
+    "ethereum-waffle": "^3.2.1",
+    "ethers": "^5.4.0",
+    "hardhat": "2.6.1",
+    "hardhat-contract-sizer": "^2.1.1",
+    "hardhat-deploy": "^0.9.1",
+    "hardhat-typechain": "^0.3.3",
+    "husky": "^4.2.3",
+    "moment": "^2.29.1",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1",
+    "solidity-coverage": "^0.7.17",
+    "ts-generator": "^0.1.1",
+    "ts-node": "^9.0.0",
+    "typechain": "^4.0.0",
+    "typescript": "^4.1.2"
+  },
+  "dependencies": {
+    "@chainlink/contracts": "^0.2.1",
+    "@chainlink/test-helpers": "^0.0.7-alpha",
+    "@nomiclabs/hardhat-web3": "^2.0.0",
+    "@walletconnect/web3-provider": "^1.4.1",
+    "chai-datetime": "^1.8.0",
+    "eth-rpc-errors": "^4.0.3",
+    "ethereum-tx-decoder": "^3.0.0",
+    "mockdate": "^3.0.5",
+    "sinon-mocha-test": "^1.2.0",
+    "web3": "^1.4.0"
+  },
+  "engines": {
+    "node": "14.x",
+    "npm": "6.x"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}
